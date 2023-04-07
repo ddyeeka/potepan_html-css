@@ -1,0 +1,3018 @@
+html {
+  font-size: 100%;
+}
+
+a {
+  color:inherit;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4, h5, h6, form, select {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+main {
+  display: block;
+}
+
+*, *:before, *:after {
+  word-break: break-all;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+
+/* ヘッダー */
+.Header {
+  width: 100%;
+  position: absolute;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 36px;
+  max-width: 100%;
+  position: relative;
+  align-items: center;
+}
+
+.lazyload {
+  background-image: none !important;
+}
+
+.HeaderLogo__image--pc {
+  display: block;
+  height: 20px;
+  width: auto;
+}
+
+.HeaderLogo__image--sp {
+  display: none;
+  height: 16px;
+  width: auto;
+}
+
+.HeaderNavList {
+  align-items: center;
+  display: flex;
+  justify-content:space-between;
+}
+
+.HeaderNavListItem__link {
+  display: block;
+}
+
+.HeaderNavListItem__link>span {
+  color: #333;
+  display: block;
+  font-weight: 700;
+  text-align: center;
+}
+
+.HeaderNavListItem__link>span:first-child {
+  font-family: 'Lato',sans-serif;
+}
+
+.HeaderNavListItem__link>span:last-child {
+  font-size: 10px;
+}
+
+.HeaderNavListItem {
+  margin-right: 45px;
+}
+
+.HeaderNavListItem__button {
+  color: #fff;
+  align-items: center;
+  background-color: #f79214;
+  border: none;
+  border-radius: 38px;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  height: 40px;
+  padding: 0 20px;
+  font-weight: 700;
+}
+
+.HeaderNavHamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .Header {
+    background-color: #fff;
+    z-index: 10;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .Header--common {
+    position: fixed !important;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavHamburger {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 21px;
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavHamburger__line:first-child {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavHamburger__line {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transform: translate(0,-50%);
+    border-radius: 10px;
+    transition: top .2s,transform .2s,opacity .3s;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavHamburger__line:last-child {
+    top: 100%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavList {
+    overflow-y: scroll;
+    position: fixed;
+    top: 60px;
+    left: 100%;
+    width: 100%;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 75px;
+    transition: transform .5s;
+    z-index: 99;
+    background-color: rgba(0,0,0,.8);
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavListItem {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavListItem__link {
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavListItem__link>span:first-child {
+    font-size: 16px;
+    letter-spacing: 5px;
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavListItem__link>span:last-child {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #f79214;
+    letter-spacing: 2px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavListItem:last-of-type {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavListItem__button {
+    font-size: 16px;
+    margin: 0 auto;
+    height: 60px;
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .HeaderNavListItem {
+    transition: opacity .2s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .HeaderNavListItem:hover {
+    opacity: .8;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .HeaderNavList {
+    top: 52px;
+  }
+}
+
+
+
+
+/* POTEPAN CAMPとは */
+.FirstView {
+  background-image: url(//camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  padding-bottom: 28px;
+}
+
+.lazyload {
+  background-image: none !important;
+}
+
+.FirstView__main-image--sp {
+  display: none;
+}
+
+.FirstView__main-image {
+  width: 100%;
+}
+
+.FirstView__container {
+  max-width: 1140px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.FirstViewContent {
+  margin-bottom: 70px;
+  width: fit-content;
+}
+
+.FirstViewContent__title {
+  color: #333;
+  font-family: 'Lato',sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 54px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.FirstViewContent__images {
+  margin-bottom: 25px;
+}
+
+.FirstViewContent__images img {
+  margin-right: 8px;
+}
+
+.FirstViewContent__buttons {
+  display: flex;
+}
+
+.FirstViewContent__buttons a {
+  align-items: center;
+  background-color: #f79214;
+  border: none;
+  border-radius: 38px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 700;
+  height: 64px;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+}
+
+.FirstViewContent__buttons a:first-of-type {
+  margin-right: 15px;
+  width: 306px;
+}
+
+.FirstViewContent__buttons a:last-of-type {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  color: #333;
+  width: 176px;
+}
+
+.FirstViewCaption {
+  color: #a2a2a4;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  .FirstView {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 35px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FirstView__main-image--sp {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FirstView__container {
+    margin-top: -45vw;
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FirstViewContent__images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FirstViewContent__images img {
+    width: 27.5%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FirstViewContent__title {
+    font-size: 25px;
+    line-height: 36px;
+    margin-left: calc(((100vw - 100%)/2)*-1);
+    margin-right: calc(((100vw - 100%)/2)*-1);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FirstViewContent {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FirstViewContent__buttons {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FirstViewContent__buttons a:first-of-type {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FirstViewContent__buttons a:last-of-type {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .FirstViewContent__buttons a {
+    transition: opacity .2s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .FirstViewContent__buttons a:hover {
+    opacity: .8;
+  }
+}
+
+
+
+
+/* POTEPAN CAMPの特徴 */
+.AboutWrapper {
+  background-color: #f79214;
+  padding: 44px 0;
+}
+
+.About {
+  max-width: 1140px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.About__video {
+  width: 50%;
+}
+
+.About__title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  margin-bottom: 0;
+  margin-left: 32px;
+  color: #fff;
+}
+
+.About__title h2 {
+  font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  line-height: 54px;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.About__title h2 span {
+  font-family: 'Lato',sans-serif;
+}
+
+.About__title p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.About__button {
+  color: #fff;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+@media screen and (max-width: 1024px) {
+  .About {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .About__video {
+    margin-bottom: 16px;
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .About__title {
+    margin-left: 0;
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .AboutWrapper {
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .About {
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .About__video {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .About__title {
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .About__title h2 {
+    font-size: 33px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .About__title h2 span {
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .About__title p {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+
+
+
+/* POTEPAN CAMPの特徴 */
+.FeatureWrapper {
+  padding: 120px 0;
+}
+
+.Feature {
+  max-width: 1140px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.Feature__title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.Feature__title h2 {
+  font-family: 'Lato',sans-serif;
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 74px;
+  margin-bottom: 10px;
+}
+
+.Feature__title p {
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Feature__title:after {
+  border-bottom: 6px solid #f79214;
+  content: '';
+  display: block;
+  margin-top: 10px;
+  width: 50px;
+}
+
+.InPageLinks {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.InPageLinks__item {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  padding: 16px;
+  text-align: center;
+  width: 20%;
+}
+
+.InPageLinks__link:after {
+  content: url(//camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/common/chevron-bottom.svg);
+  display: inline-block;
+  margin-left: 5px;
+  transform: scale(.9);
+}
+
+.FeatureList {
+  margin-top: 110px;
+}
+
+.FeatureList__item:first-of-type {
+  margin-top: 0;
+}
+
+.FeatureList__item {
+  background-color: #fcfaf5;
+  border-radius: 20px;
+  text-align: center;
+  padding: 40px;
+  margin-top: 120px;
+}
+
+@media screen and (max-width: 960px) {
+  .InPageLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .InPageLinks__item {
+    width: calc(33% - 8px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Feature {
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Feature__title h2 {
+    font-size: 33px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Feature__title h2 span {
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Feature__title br {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Feature__title p {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .InPageLinks__link:after {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FeatureList {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FeatureList__item {
+    margin-top: 90px;
+    padding: 30px 20px 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .InPageLinks__item {
+    width: calc(50% - 4px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .InPageLinks {
+    justify-content: space-between;
+  }
+}
+
+
+
+
+/* 01 Web系開発企業への転職に強い*/
+.SuccessStoriesSection__number {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -90px auto 0 auto;
+  background-color: #fcfaf5;
+  border-radius: 50%;
+  color: #f79214;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.SuccessStoriesSection__title {
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 48px;
+  margin-top: -20px;
+  letter-spacing: 1px;
+}
+
+.SuccessStoriesSection__description {
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 26px;
+  margin-top: 15px;
+}
+
+.SuccessStoriesSection__description strong {
+  color: #f79214;
+  font-size: 28px;
+  font-family: 'Lato',sans-serif;
+  font-weight: 900;
+  line-height: 39px;
+}
+
+.SuccessStoriesSection__description--caption {
+  color: #a2a2a4;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 5px 0;
+}
+
+.SuccessStoriesSection__caption {
+  color: #a2a2a4;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 5px 0;
+}
+
+.SuccessStoriesSection__graphs {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.SuccessStories {
+  background-color: #fff;
+  width: 100%;
+  margin-top: 24px;
+  border-radius: 20px;
+  padding: 43.5px 30px;
+}
+
+.SuccessStoriesSection__graphs {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.SuccessStoriesSection__graphs>img {
+  max-width: 337px;
+}
+
+.CareerChangeCase__title {
+  color: #333;
+  display: inline-block;
+  font-size: 21px;
+  line-height: 28px;
+  margin-bottom: 24px;
+}
+
+.CareerChangeCase__title:after {
+  content: '';
+  border-bottom: solid 4px #f79214;
+  display: block;
+  margin-top: 10px;
+}
+
+.CareerChangeImages {
+  display: flex;
+  justify-content: space-between;
+}
+
+.CareerChangeImages__image {
+  width: calc((100% - 20px)/2);
+}
+
+.CareerChangeImages__image--sp {
+  display: none;
+}
+
+.SuccessStories__title {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.SuccessStories__title h4 {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.SuccessStories__title img {
+  margin-left: 10px;
+  height: 35px;
+  width: 34px;
+}
+
+.SuccessStories__title:after {
+  content: '';
+  border-bottom: solid 4px #f79214;
+  display: block;
+  margin-top: 10px;
+}
+
+.SuccessStoriesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+.SuccessStoriesList__link {
+  cursor: pointer;
+  display: contents;
+}
+
+.SuccessStory :hover {
+  color: #f79214;
+} 
+
+.SuccessStory {
+  align-items: center;
+  display: flex;
+  width: 33.3%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+
+.SuccessStoriesList img {
+  width: 60px;
+  height: 60px;
+}
+
+.SuccessStory__intro {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 10px 16px;
+  text-align: left;
+}
+
+.SuccessStory__intro p {
+  color: #000;
+  font-weight: 700;
+}
+
+.SuccessStory:after {
+  content: url(//camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/common/chevron-right.jpg);
+  display: inline-block;
+  height: fit-content;
+  margin: auto;
+  transform: scale(.4);
+}
+
+.SuccessStories__link-button {
+  align-items: center;
+  background-color: #f79214;
+  border: none;
+  border-radius: 38px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 700;
+  height: 64px;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  margin: 40px auto 10px;
+  width: 300px;
+}
+
+@media screen and (max-width: 1080px) {
+  .SuccessStoriesSection {
+    margin-top: -120px;
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .SuccessStoriesSection__graphs>img {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .SuccessStory {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStoriesSection__number {
+    font-size: 30px;
+    height: 80px;
+    margin-top: -70px;
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStoriesSection__title {
+    font-size: 21px;
+    line-height: 28px;
+    margin-top: -10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStoriesSection__description--caption {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStoriesSection__description>br:nth-of-type(2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStoriesSection__caption {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStoriesSection__graphs {
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    margin: 40px 0 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStoriesSection__graphs>img {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CareerChangeCase__title {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CareerChangeCase__title:after {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CareerChangeImages {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CareerChangeImages__image--pc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CareerChangeImages__image {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CareerChangeImages__image:nth-of-type(3) {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CareerChangeImages__image--sp {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStories {
+    margin-top: 40px;
+    padding: 20px;
+    padding-top: 40px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStories__title>h4 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStories__title>img {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStories__title:after {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStoriesList {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStory {
+    align-items: center;
+    padding-right: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStory:after {
+    margin-right: 6px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStoriesList .last-line {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SuccessStoriesList .last-line {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .SuccessStories__link-button {
+    transition: opacity .2s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .SuccessStories__link-button:hover {
+    opacity: .8;
+  }
+}
+
+
+
+
+/* 02 現場評価の高い実践的なカリキュラム*/
+.CorporateInterviewListSection__number {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -90px auto 0 auto;
+  background-color: #fcfaf5;
+  border-radius: 50%;
+  color: #f79214;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.CorporateInterviewListSection__title {
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 48px;
+  margin-top: -20px;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.CurriculumOverview {
+  align-items: center;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.CurriculumOverview__description {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 30px;
+  text-align: left;
+  position: relative;
+}
+
+.CurriculumOverview__description>strong {
+  color: #f79214;
+}
+
+.CurriculumOverview__description:after {
+  content: url(//camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/corporate-interviews/pointer.svg);
+  bottom: -38px;
+  left: 0;
+  position: absolute;
+}
+
+.CorporateInterviewCard {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  margin-bottom: 25px;
+  padding: 30px;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.CorporateInterviewCard--with-link {
+  padding: 30px 30px 60px;
+}
+
+.CorporateInterviewCard__left {
+  color: #a2a2a4;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.CorporateInterviewCard__left img {
+  border-radius: 4px;
+  width: 390px;
+  margin-bottom: 5px;
+}
+
+.CorporateInterviewCard__right {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 40px;
+  margin-left: 16px;
+}
+
+.CorporateInterviewCard__right p {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.CorporateInterviewCard__link {
+  align-items: baseline;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.CorporateInterviewCard__link a {
+  color: #a2a2a4;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.CorporateInterviewCard__link img {
+  margin-left: 10px;
+  width: 6px;
+}
+
+.CorporateInterviewListSection__link-button {
+  align-items: center;
+  background-color: #f79214;
+  border: none;
+  border-radius: 38px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 700;
+  height: 64px;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  margin: 40px auto 10px;
+  width: 300px;
+}
+
+.CorporateInterviewListSection__link-button span:first-child {
+  font-family: 'Lato',sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.CorporateInterviewListSection__link-button span:last-child {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 1080px) {
+  .CorporateInterviewListSection {
+    margin-top: -120px;
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .CorporateInterviewListSection__title {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .CurriculumOverview {
+    flex-direction: column;
+    gap: 22px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .CurriculumOverview__description {
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .CurriculumOverview__description>br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .CurriculumOverview__description {
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CorporateInterviewListSection__number {
+    font-size: 30px;
+    height: 80px;
+    margin-top: -70px;
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CorporateInterviewListSection__title {
+    font-size: 21px;
+    line-height: 28px;
+    margin-top: -10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CurriculumOverview__description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CurriculumOverview__description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CorporateInterviewList {
+    margin-bottom: 4px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CorporateInterviewCard--with-link {
+    padding: 20px 20px 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CorporateInterviewCard__left {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CorporateInterviewCard__left img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CorporateInterviewCard__left span {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CorporateInterviewCard__right {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CorporateInterviewCard__link {
+    align-items: center;
+    margin-top: 25px;
+    position: static;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CorporateInterviewCard {
+    display: block;
+    margin: 0 auto 25px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CorporateInterviewListSection__link-button {
+    margin: 20px auto;
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .CorporateInterviewListSection__link-button {
+    transition: opacity .2s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .CorporateInterviewListSection__link-button:hover {
+    opacity: .8;
+  }
+}
+
+
+
+
+/* 03 経験豊富なエンジニア陣がレビュー*/
+.ReviewersSection__number {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -90px auto 0 auto;
+  background-color: #fcfaf5;
+  border-radius: 50%;
+  color: #f79214;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.ReviewersSection__title {
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 48px;
+  margin-top: -20px;
+  letter-spacing: 1px;
+}
+
+.ReviewersSection__description {
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 26px;
+  margin-top: 15px;
+  margin-bottom: 24px;
+}
+
+.ReviewersSection__description--strong {
+  background: linear-gradient(transparent 80%,#fff79d 0%);
+  display: inline;
+  margin-top: 24px;
+  padding: 0 0 3px;
+}
+
+.ReviewersSection__description strong {
+  color: #f79214;
+  font-size: 28px;
+  font-family: 'Lato',sans-serif;
+  font-weight: 900;
+  line-height: 39px;
+}
+
+.Reviewers {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px -15px;
+}
+
+.ReviewerCard {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  margin: 0 15px;
+  padding: 20px;
+  width: calc(100%/3);
+}
+
+.ReviewerCard__company-logo {
+  width: 100%;
+}
+
+.ReviewerCard__comment {
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 20px;
+  padding: 20px;
+  position: relative;
+  text-align: start;
+  width: 100%;
+}
+
+.ReviewerCard__comment:before {
+  border: 15px solid transparent;
+  border-bottom: 15px solid #f6f6f6;
+  content: '';
+  margin-left: -15px;
+  position: absolute;
+  top: -25px;
+  left: 29px;
+}
+
+.ReviewerProfile {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.ReviewerProfile__image {
+  width: 60px;
+}
+
+.ReviewerProfile__name {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin-left: 15px;
+  text-align: left;
+}
+
+.ReviewerProfile__name>span {
+  color: #f79214;
+  font-size: 14px;
+}
+
+.InterviewSummarySection {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.InterviewSummarySection__title {
+  color: #f79214;
+  font-family: 'Lato',sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.InterviewSummary {
+  align-content: flex-start;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.InterviewSummary__question {
+  border-bottom: 2px solid #f79214;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 16px;
+  padding-bottom: 5px;
+  text-align: left;
+  width: fit-content;
+}
+
+.InterviewSummary__answer {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.InterviewSummary__profile {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+}
+
+.InterviewSummary__image {
+  height: 178px;
+  width: 290px;
+}
+
+@media screen and (max-width: 1080px) {
+  .ReviewersSection {
+    margin-top: -120px;
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ReviewersSection__number {
+    font-size: 30px;
+    height: 80px;
+    margin-top: -70px;
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ReviewersSection__title {
+    font-size: 21px;
+    line-height: 28px;
+    margin-top: -10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ReviewerCard {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px 20px 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .InterviewSummarySection {
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .InterviewSummary {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .InterviewSummary__image {
+    height: auto;
+    width: 100%;
+  }
+}
+
+
+
+
+/* 04 卒業生限定の求人紹介 */
+.PartnerCorporationSection__number {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -90px auto 0 auto;
+  background-color: #fcfaf5;
+  border-radius: 50%;
+  color: #f79214;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.PartnerCorporationSection__title {
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 48px;
+  margin-top: -20px;
+  letter-spacing: 1px;
+}
+
+.PartnerCorporationSection__description {
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 26px;
+  margin-top: 15px;
+  padding-bottom: 30px;
+}
+
+.PartnerCorporationSection__description strong {
+  color: #f79214;
+  font-size: 28px;
+  font-family: 'Lato',sans-serif;
+  font-weight: 900;
+  line-height: 39px;
+}
+
+.InterviewSummarySection {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.InterviewSummarySection {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.InterviewSummarySection {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.InterviewSummary__question {
+  border-bottom: 2px solid #f79214;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 16px;
+  padding-bottom: 5px;
+  text-align: left;
+  width: fit-content;
+}
+
+.InterviewSummary__answer {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+@media screen and (max-width: 1080px) {
+  .PartnerCorporationSection {
+    margin-top: -120px;
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .PartnerCorporationSection__number {
+    font-size: 30px;
+    height: 80px;
+    margin-top: -70px;
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .PartnerCorporationSection__title {
+    font-size: 21px;
+    line-height: 28px;
+    margin-top: -10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .InterviewSummarySection {
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .InterviewSummarySection {
+    padding: 24px;
+  }
+}
+
+
+
+
+/* 05 実績豊富な学習サポート */
+.SupportSystemSection__number {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -90px auto 0 auto;
+  background-color: #fcfaf5;
+  border-radius: 50%;
+  color: #f79214;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.SupportSystemSection__title {
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 48px;
+  margin-top: -20px;
+  letter-spacing: 1px;
+}
+
+.SupportSystemSection__description {
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 26px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+.SupportSystem {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  gap: 35px;
+  margin-bottom: 35px;
+}
+
+.SupportSystem:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.SupportSystem:last-of-type {
+    margin-bottom: 0;
+}
+
+.SupportSystem__image {
+  display: block;
+  height: auto;
+  width: 50%;
+  z-index: 1;
+}
+
+.SupportContent {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: -120px;
+  padding: 40px 30px 40px 130px;
+  text-align: left;
+  z-index: 0;
+}
+
+.SupportContent--even {
+  margin-right: -120px;
+  margin-left: 0;
+  padding: 60px 130px 60px 30px;
+}
+
+.SupportContentHeading {
+  align-items: flex-end;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.SupportContentHeading__title {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.SupportContent__icon {
+  margin-bottom: 15px;
+  width: 63px;
+}
+
+.SupportContent__icon--pc {
+  display: block;
+}
+
+.SupportContent__icon--sp {
+  display: none;
+}
+
+.SupportContent__image {
+  display: none;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.Feature__link-button {
+  align-items: center;
+  background-color: #f79214;
+  border: none;
+  border-radius: 38px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 700;
+  height: 64px;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  margin: 60px auto 20px;
+  width: 300px;
+}
+
+.Feature__link-button span:first-child {
+  font-family: 'Lato',sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.Feature__link-button span:last-child {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 1080px) {
+  .SupportSystemSection {
+    margin-top: -120px;
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 1080px)
+.SupportSystemSection {
+    margin-top: -120px;
+    padding-top: 120px;
+}
+
+@media screen and (max-width: 767px) {
+  .SupportSystemSection__number {
+    font-size: 30px;
+    height: 80px;
+    margin-top: -70px;
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SupportSystemSection__title {
+    font-size: 21px;
+    line-height: 28px;
+    margin-top: -10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SupportSystem {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SupportSystem__image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SupportContent {
+    margin-left: 0;
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SupportContentHeading {
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .SupportContent__image {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Feature__link-button {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Feature__link-button {
+    transition: opacity .2s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Feature__link-button:hover {
+    opacity: .8;
+  }
+}
+
+
+
+
+/* 未経験からのエンジニア転職に強い理由 */
+.ReasonWrapper {
+  padding: 120px 0;
+  background-color: #fcfaf5;
+}
+
+.ReasonContainer {
+  max-width: 1140px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.ReasonContainer__title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+  width: 100%;
+  position: relative;
+}
+
+.ReasonContainer__title h2 {
+  font-family: 'Lato',sans-serif;
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 74px;
+  margin-bottom: 10px;
+}
+
+.ReasonContainer__title p {
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.ReasonContainer__title>img {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  width: 250px;
+}
+
+.ReasonContainer__title:after {
+  border-bottom: 6px solid #f79214;
+  content: '';
+  display: block;
+  margin-top: 10px;
+  width: 50px;
+}
+
+.Reason {
+  background-color: #fff;
+  margin-bottom: 40px;
+  padding: 35px;
+}
+
+.Reason__title {
+  display: block;
+  align-items: flex-start;
+  color: #000;
+  display: flex;
+  font-size: 21px;
+  line-height: 32px;
+  margin-bottom: 35px;
+}
+
+.Reason__title>img {
+  margin-right: 15px;
+  width: 30px;
+}
+
+.Reason__image {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.Reason__image--pc {
+  display: block;
+}
+
+.Reason__image--sp {
+    display: none;
+}
+
+.Reason__description {
+  color: #000;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 40px;
+}
+
+.Reason__description:last-of-type {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .ReasonWrapper {
+    padding: 120px 0 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ReasonContainer {
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ReasonContainer__title h2 {
+    font-size: 33px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ReasonContainer__title p {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ReasonContainer__title>img {
+    top: -50px;
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Reason {
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Reason__title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Reason__image--pc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Reason__image {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Reason__image--sp {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Reason__image {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Reason__description {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+/* POTEPAN CAMPのコース */
+.CourseListWrapper {
+  padding: 120px 0;
+  background-color: #f4f5f7;
+}
+
+.CourseList {
+  max-width: 1140px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.CourseList__title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+  width: 100%;
+  position: relative;
+}
+
+.CourseList__title h2 {
+  font-family: 'Lato',sans-serif;
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 74px;
+  margin-bottom: 10px;
+}
+
+.CourseList__title h2 span {
+  font-weight: 900;
+}
+
+.CourseList__title p {
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.CourseList__title>img {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  width: 250px;
+}
+
+.CourseList__title:after {
+  border-bottom: 6px solid #f79214;
+  content: '';
+  display: block;
+  margin-top: 10px;
+  width: 50px;
+}
+
+.CourseListItem {
+  margin-bottom: 45px;
+}
+
+.CourseListItem__link {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  padding: 45px;
+}
+
+.CourseNameSection {
+  align-items: center;
+  border: solid 3px;
+  border-image: linear-gradient(to right,#f79214 0%,#f74e06 100%);
+  border-image-slice: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 30px;
+  padding: 20px 0;
+  width: 30%;
+}
+
+.CourseNameSection__lead {
+  color: #f79214;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 7.5px;
+}
+
+.CourseNameSection__title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.CourseContentSection {
+  position: relative;
+  width: calc(70% + 30px);
+}
+
+.CourseContentSection__description {
+  color: #f79214;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.CourseDescriptionList {
+  align-items: center;
+  display: flex;
+  margin-top: 20px;
+}
+
+.CourseDescriptionList--price {
+  align-items: baseline;
+}
+
+.CourseDescriptionList__dt {
+  background: linear-gradient(90deg,#212121,#444);
+  border-radius: 20px;
+  color: #fff;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  margin-right: 15px;
+  padding: 10px 15px;
+}
+
+.CourseDescriptionList__dd {
+  font-size: 18px;
+}
+
+.CourseDescriptionList__dd>span {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.CourseContentSection__link {
+  color: #999;
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  right: 20px;
+  bottom: -5px;
+}
+
+.CourseContentSection__link:after {
+  content: url(//camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/common/chevron-right.jpg);
+  display: inline-block;
+  height: 8px;
+  margin: auto;
+  position: absolute;
+  bottom: 10px;
+  right: -14px;
+  transform: scale(.4);
+  width: 8px;
+}
+
+.ContentRefund {
+  background-color: #f6f6f6;
+  border: 1px solid #aeb5bc;
+  margin-bottom: 60px;
+  padding: 20px;
+}
+
+.ContentRefund__lead {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 39px;
+}
+
+.ContentRefundDetail {
+  align-items: center;
+  display: flex;
+}
+
+.ContentRefundDetail__label {
+  background-color: #dfdfdf;
+  color: #777;
+  font-size: 18px;
+  font-weight: 700;
+  height: 48px;
+  line-height: 48px;
+  margin-right: 15px;
+  padding: 0 15px;
+  text-align: center;
+  width: 121px;
+  word-break: keep-all;
+}
+
+.ContentRefundDetail__title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 64px;
+  margin-right: 15px;
+  word-break: keep-all;
+}
+
+.ContentRefundDetail__caption {
+  color: #a2a2a4;
+  font-size: 12px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.ContentRefundDetail__caption a {
+  color: #a2a2a4;
+}
+
+.CourseList__button {
+  align-items: center;
+  background-color: #f79214;
+  border: none;
+  border-radius: 38px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 700;
+  height: 64px;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  margin: 60px auto 0;
+  width: 300px;
+}
+
+.CourseList__button span:first-child {
+  font-family: 'Lato',sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.CourseList__button span:last-child {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 767px) {
+  .CourseList {
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CourseList__title h2 {
+    font-size: 33px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CourseList__title h2 span {
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CourseList__title br {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CourseList__title p {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CourseList__title>img {
+    top: -50px;
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CourseListItem__link {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CourseNameSection {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CourseContentSection {
+    margin-top: 25px;
+    padding-right: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CourseDescriptionList {
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CourseDescriptionList__dt {
+    word-break: keep-all;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CourseContentSection__link {
+    margin-top: 25px;
+    padding-right: 20px;
+    position: static;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .CourseContentSection__link:after {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ContentRefund {
+    margin-right: unset;
+    margin-left: unset;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ContentRefund__lead {
+    font-size: 21px;
+    margin-bottom: 7.5px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ContentRefundDetail {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ContentRefundDetail__label {
+    font-size: 16px;
+    height: 29px;
+    line-height: 29px;
+    margin-right: 10px;
+    margin-bottom: 7.5px;
+    padding: 0;
+    width: 96px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ContentRefundDetail__title {
+    font-size: 25px;
+    line-height: 32px;
+    margin-right: 0;
+    margin-bottom: 7.5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .CourseList__button {
+    transition: opacity .2s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .CourseList__button:hover {
+    opacity: .8;
+  }
+}
+
+
+
+
+/* お役立ちコンテンツ */
+.UsefulContentWrapper {
+  padding: 120px 0;
+}
+
+.UsefulContent {
+  max-width: 1140px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.UsefulContent__title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.UsefulContent__title h2 {
+  font-family: 'Lato',sans-serif;
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 74px;
+  margin-bottom: 10px;
+}
+
+.UsefulContent__title p {
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.UsefulContent__title:after {
+  border-bottom: 6px solid #f79214;
+  content: '';
+  display: block;
+  margin-top: 10px;
+  width: 50px;
+}
+
+.YoutubeVideos {
+  display: flex;
+}
+
+.YoutubeVideo {
+  margin-right: 20px;
+  width: fit-content;
+  width: 384px;
+}
+
+.YoutubeVideo iframe {
+  height: 185px;
+  width: 100%;
+}
+
+.YoutubeVideo__title {
+  color: #333;
+  font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.UsefulContent__link-button {
+  align-items: center;
+  background-color: #f79214;
+  border: none;
+  border-radius: 38px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 700;
+  height: 64px;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  margin: 60px auto 20px;
+  width: 300px;
+}
+
+.UsefulContent__link-button span:first-child {
+  font-family: 'Lato',sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.UsefulContent__link-button span:last-child {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 1080px) {
+  .YoutubeVideo {
+    width: 309px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .YoutubeVideo iframe {
+    height: 171px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .UsefulContent {
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .UsefulContent__title h2 {
+    font-size: 33px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .UsefulContent__title p {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .YoutubeVideos {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .YoutubeVideo {
+    margin-bottom: 20px;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .YoutubeVideo iframe {
+    height: 52.5vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .UsefulContent__link-button {
+    margin: 30px auto 20px;
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .UsefulContent__link-button {
+    transition: opacity .2s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .UsefulContent__link-button:hover {
+    opacity: .8;
+  }
+}
+
+
+
+
+/* フッター */
+.FixedFooter {
+  bottom: 28px;
+  position: fixed;
+  right: 4px;
+  z-index: 10;
+}
+
+.FixedFooter img {
+  cursor: pointer;
+  display: block;
+  max-width: 367px;
+}
+
+.Footer {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background-color: #f79314;
+}
+
+.FooterContainer {
+  max-width: 1140px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.FooterList {
+  margin-right: 20px;
+  order: 2;
+}
+
+.FooterList__item {
+  font-family: 'Lato',sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.FooterList__item>a {
+  color: #fff;
+}
+
+.FooterList__item>a>span {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 1em;
+}
+
+.FooterList__item:first-of-type {
+  margin-top: 0;
+}
+
+.FooterListAndCharacter {
+  order: 3;
+}
+
+.FooterListAndCharacter .FooterList {
+  margin-right: 0;
+}
+
+.FooterListAndCharacter__character {
+  display: block;
+  margin: 80px 0 0 auto;
+  width: 152px;
+}
+
+.FooterInfo {
+  color: #fff;
+  display: block;
+  margin-right: 40px;
+  order: 1;
+}
+
+.FooterInfo__logo {
+  display: inline-block;
+  max-width: 280px;
+}
+
+.FooterInfo__logo>img {
+  width: 100%;
+  height: auto;
+}
+
+.FooterInfo__company-name {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 25px;
+  font-style: normal;
+}
+
+.FooterInfo__address {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+  font-style: normal;
+}
+
+.FooterSocialList {
+  display: flex;
+  margin-top: 35px;
+}
+
+.FooterSocialList__item {
+  margin-left: 20px;
+  display: block;
+  max-width: 60px;
+}
+
+.FooterSocialList__item:first-of-type {
+  margin-left: 0;
+}
+
+.FooterSocialList__item img {
+  width: 100%;
+  height: auto;
+}
+
+.FooterCopyrightContainer {
+  max-width: 1140px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.FooterCopyright {
+  color: #fff;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 960px) {
+  .FooterContainer {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .FooterInfo {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Footer {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FooterContainer {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FooterContainer {
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FooterList {
+    text-align: left;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FooterList__item {
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FooterListAndCharacter {
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FooterListAndCharacter__character {
+    margin: 34px auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FooterInfo {
+    border-top: 1px solid #fff;
+    margin-right: 0;
+    padding-top: 35px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FooterInfo__company-name {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FooterInfo__address {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FooterSocialList {
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .FooterCopyrightContainer {
+    margin-top: 40px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FooterCopyrightContainer {
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .FooterInfo__logo {
+    transition: opacity .2s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .FooterInfo__logo:hover {
+    opacity: .8;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .FooterSocialList__item {
+    transition: opacity .2s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .FooterSocialList__item:hover {
+    opacity: .8;
+  }
+}
+
+
